@@ -87,7 +87,11 @@ def get_disk():
     for disk in psutil.disk_partitions():
         disk_list.append([disk[0], disk[1]])  # 标识，挂载点
     for disk in disk_list:
-        usage = psutil.disk_usage(disk[1])
+        try:
+            usage = psutil.disk_usage(disk[1])
+        except (PermissionError, psutil.AccessDenied):
+            # 无法读取硬盘，WinServer有可能是一个光驱导致，跳过
+            continue
         disk_temp = {
             "标识": disk[0],
         }

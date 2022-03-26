@@ -49,3 +49,7 @@ swap
 硬盘:
  标识: /dev/vda1 挂载点: / 总空间: 58.9G 已使用: 35.1G (62.2%) 剩余: 21.3G
 ```
+
+# 日志
+2022/03/25 摸了。  
+2022/03/27 fix WinServer存在一个CD驱动器导致读取硬盘信息报错 [#1](https://github.com/pcrbot/sys_stats_HoshinoBot/issues/1)
