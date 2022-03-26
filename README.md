@@ -52,4 +52,5 @@ swap
 
 # 日志
 2022/03/25 摸了。  
-2022/03/27 fix WinServer存在一个CD驱动器导致读取硬盘信息报错 [#1](https://github.com/pcrbot/sys_stats_HoshinoBot/issues/1)
+2022/03/27 fix WinServer存在一个CD驱动器导致读取硬盘信息报错 [#1](https://github.com/pcrbot/sys_stats_HoshinoBot/issues/1)  
+2022/03/27 在windows下取消输出swap的累计I/O（恒为0）

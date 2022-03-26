@@ -76,8 +76,9 @@ def get_swap():
         ),
         "已使用": f"{human(swapmem[1])} ({swapmem[3]}%)",
         "剩余": human(swapmem[2]),
-        "累计I/O": f"{human(swapmem[4])} / {human(swapmem[5])}",
     }
+    if islinux:
+        swap_info.update({"累计I/O": f"{human(swapmem[4])} / {human(swapmem[5])}",})
     return swap_info
 
 
