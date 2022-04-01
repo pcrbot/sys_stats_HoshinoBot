@@ -130,8 +130,7 @@ async def sys_stats(bot, ev):
     msg += "物理内存：\n"
     for key, value in get_memory().items():
         msg += f" {key}：{value}\n"
-    msg += ("虚拟内存" if platform.system().lower()
-            == "windows" else "swap") + "\n"
+    msg += ("虚拟内存" if platform.system().lower() == "windows" else "swap") + "\n"
     for key, value in get_swap().items():
         msg += f" {key}：{value}\n"
     msg += "硬盘：\n"
